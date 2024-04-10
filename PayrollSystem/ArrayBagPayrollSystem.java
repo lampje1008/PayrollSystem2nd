@@ -5,8 +5,8 @@ import java.util.Scanner;
 /** System for management of employee's pay using ArrayBag. */
 public class ArrayBagPayrollSystem {
 	public static void main(String[] args) {
-		// create five-element Employee bag
-		BagInterface<Employee> employees = new ArrayBag<>(5);
+		// create an Employee bag whose capacity is 25(default).
+		BagInterface<Employee> employees = new ArrayBag<>();
 		
 		// initialize bag with Employees
 		employees.add(new SalariedEmployee("John", "Smith", "111-11-1111", 6, 15, 1944, 6, 15, 1974, 800000.00));
