@@ -5,16 +5,13 @@ import java.util.Scanner;
 /** System for management of employee's pay. */
 public class PayrollSystem {
 	public static void main(String[] args) {
-		// create five-element Employee array
-		Employee[] employees = new Employee[5];
-		
-		// initialize array with Employees
-		employees[0] = new SalariedEmployee("John", "Smith", "111-11-1111", 6, 15, 1944, 6, 15, 1974, 800000.00);
-		employees[1] = new HourlyEmployee("Karen", "Price", "222-22-2222", 12, 29, 1960, 12, 29, 1990, 16750, 40);
-		employees[2] = new CommissionEmployee("Sue", "Jones", "333-33-3333", 9, 8, 1954, 9, 8, 1984, 10000000, .06);
-		employees[3] = new BasePlusCommissionEmployee("Bob", "Lewis", "444-44-4444", 3, 2, 1965, 3, 2, 1995, 5000000, .04, 300000);
-		employees[4] = new SalariedEmployee("Dongyeon", "Kim", "555-55-5555", 7, 16, 1945, 7, 16, 1975, 900000.00);
-		
+		// create and initialize five-element Employee array
+		Employee[] employees = {new SalariedEmployee("John", "Smith", "111-11-1111", 6, 15, 1944, 6, 15, 1974, 800000.00),
+					new HourlyEmployee("Karen", "Price", "222-22-2222", 12, 29, 1960, 12, 29, 1990, 16750, 40),
+					new CommissionEmployee("Sue", "Jones", "333-33-3333", 9, 8, 1954, 9, 8, 1984, 10000000, .06),
+					new BasePlusCommissionEmployee("Bob", "Lewis", "444-44-4444", 3, 2, 1965, 3, 2, 1995, 5000000, .04, 300000),
+					new SalariedEmployee("Dongyeon", "Kim", "555-55-5555", 7, 16, 1945, 7, 16, 1975, 900000.00)};
+
 		Scanner input = new Scanner(System.in);	// to get current date
 		Date date;
 		int month, day, year;
