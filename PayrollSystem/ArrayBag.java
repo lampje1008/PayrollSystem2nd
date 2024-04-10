@@ -33,18 +33,16 @@ public final class ArrayBag<T> implements BagInterface<T> {
 	
 	/** Adds a new entry to this bag.
 	 * @param newEntry	The object to be added as a new entry.
-	 * @return	True if the addition is successful, or false if not. */
+	 * @return	True. */
 	public boolean add(T newEntry) {
 		checkInitialization();
-		boolean result = true;
 		if (isArrayFull())
 			doubleCapacity();
-		else { // Assertion: result is true here
-			bag[numberOfEntries] = newEntry;
-			numberOfEntries++;
-		} // end if
 		
-		return result;
+		bag[numberOfEntries] = newEntry;
+		numberOfEntries++;
+		
+		return true;
 	} // end add
 	
 	/** Retrieves all entries that are in this bag.
