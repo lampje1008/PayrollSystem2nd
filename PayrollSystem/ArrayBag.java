@@ -36,7 +36,7 @@ public final class ArrayBag<T> implements BagInterface<T> {
 	 * @return	True. */
 	public boolean add(T newEntry) {
 		checkInitialization();
-		if (isArrayFull())
+		while (isArrayFull())
 			doubleCapacity();
 		
 		bag[numberOfEntries] = newEntry;
